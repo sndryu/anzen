@@ -1,7 +1,7 @@
 window.onload = () => {
   const container = document.getElementById("alert-container");
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 10; i++) {
     const alertBox = document.createElement("div");
     alertBox.className = "alert-window";
     alertBox.style.top = `${Math.random() * 300}px`;
@@ -13,7 +13,7 @@ window.onload = () => {
         <button class="close-button" onclick="this.parentElement.parentElement.remove()">×</button>
       </div>
       <div class="alert-body">
-        これはウィンドウ風のアラートです！
+        りんぼがたくさん！！！
       </div>
     `;
 
