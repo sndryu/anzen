@@ -1,6 +1,22 @@
-// ページ読み込み時に連続アラート
 window.onload = () => {
-  for (let i = 1; i <= 10; i++) {
-    alert(`これは ${i} 個目のアラートです！`);
+  const container = document.getElementById("alert-container");
+
+  for (let i = 0; i < 5; i++) {
+    const alertBox = document.createElement("div");
+    alertBox.className = "alert-window";
+    alertBox.style.top = `${Math.random() * 300}px`;
+    alertBox.style.left = `${Math.random() * 500}px`;
+
+    alertBox.innerHTML = `
+      <div class="alert-header">
+        アラート ${i + 1}
+        <button class="close-button" onclick="this.parentElement.parentElement.remove()">×</button>
+      </div>
+      <div class="alert-body">
+        これはウィンドウ風のアラートです！
+      </div>
+    `;
+
+    container.appendChild(alertBox);
   }
 };
